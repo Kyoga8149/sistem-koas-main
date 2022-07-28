@@ -71,7 +71,8 @@ class Group extends Resource
                     return $request->input('study_type');
                 })
                 ->required(),
-
+            BelongsTo::make('Station'),
+         
             Date::make('Start Date')
                 ->default(now()->addDay())
                 ->required(),

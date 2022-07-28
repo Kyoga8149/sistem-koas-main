@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use App\Models\Student;
+use App\Models\Station;
+use App\Models\Teacher;
 use App\Enums\StudyType;
 use App\Models\StationGroup;
 use App\Models\Enums\GroupStatus;
@@ -44,4 +46,11 @@ class Group extends Model
     {
         return $this->morphMany(Attachment::class, 'attachable');
     }
+
+    public function station()
+    {
+        return $this->belongsTo(Station::class);
+    }
+
+   
 }

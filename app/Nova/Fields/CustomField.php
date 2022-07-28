@@ -25,4 +25,6 @@ class CustomField
                 AttachmentType::SuratPengantarKoas->value => 'Surat Pengantar Koas',
             ]);
     }
+
+    
 }
